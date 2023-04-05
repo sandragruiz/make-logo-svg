@@ -9,7 +9,13 @@ inquirer
         {
             type: 'input',
             message: 'Input your text here (3-character maximum)',
-            name: 'text'
+            name: 'text',
+            validate: function(answer1) {
+                if (answer1.length <= 3) {
+                  return true;
+                }
+                return 'Answer must be no more than 3 characters!';
+            }
         },
         {
             type: 'input',
@@ -43,17 +49,15 @@ inquirer
         //Create svg file
         console.log(builtShape.render())
         const template = `
-        <svg version="1.1" width="400" height="400" xmlns="http://www.w3.org/2000/svg">
+        <svg version="1.1" width="300" height="200" xmlns="http://www.w3.org/2000/svg">
         
         ${builtShape.render()}
         ${newText.render()}
         
         </svg>`
 
-        fs.writeFile("./examples/" + answers.shapes + ".svg", template, (err) => {
-            if(err)throw err;
+        fs.writeFile("./examples/" + "logo.svg", template, (err) => {
+            if (err) throw err;
+            else console.log ("Generated logo.svg")
         })
     })
-
-    //validate for 3-character text
-    //adjust text/shape dimensions
