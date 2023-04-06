@@ -13,7 +13,11 @@ the terminal. This application was made with Inquirer version 8.2.4.
 
 Open the application files. To build your logo, use your terminal to run 'node index' or 'node index.js'. You will be prompted to specify your desired text (3-character limit), 
 text color, shape (3 options including triangle, circle and square) and shape color. A message in your console will let you know when your logo has been generated successfully. 
-You may find your newly generated logo.svg file under the /examples folder. To view it, open the file in your browser. 
+You may find your newly generated logo.svg file under the /examples folder. To view it, open the file in your browser.  
+
+The video below shows the testing and functionality:  
+
+https://drive.google.com/file/d/1s8tr55H-q3MFtdmgJPh1tJ_piPbIya08/view   
 
 ## License
 
